@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="fill"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/icon_text_view"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/teal_200"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/content_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="100"
+        android:gravity="fill"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/email_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/email_preview_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/extra_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/email_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="20/4/2021" />
+
+        <Button
+            android:id="@+id/hightlight_btn"
+            style='?android:attr/borderlessButtonStyle'
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:drawableLeft="@drawable/drawable_star"
+            android:gravity="center"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+</LinearLayout>
