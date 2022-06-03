@@ -62,10 +62,9 @@ public class EmailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         Email email = emails.get(position);
         String iconText = email.getName().substring(0,1);
         ((EmailViewHolder) holder).emailIcon.setText(iconText);
-        Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        ((EmailViewHolder)holder).emailIcon.setBackgroundTintList(ColorStateList.valueOf(color));
-        ((EmailViewHolder)holder).emailIcon.setTextColor(getInverseColor(color));
+
+        ((EmailViewHolder)holder).emailIcon.setBackgroundTintList(email.getColor());
+        ((EmailViewHolder)holder).emailIcon.setTextColor(email.getTextColor());
         ((EmailViewHolder) holder).emailDate.setText(DateFormat.format("hh:mm aa", email.getDate()));
         ((EmailViewHolder) holder).emailName.setText(email.getName());
         ((EmailViewHolder) holder).emailPreviewText.setText(email.getPreviewText());
